@@ -15,8 +15,8 @@ $(document).ready(function () {
     }, 1000);
 
     //localStorage function
-    for (var i = 8; i <= 15; i++) {
-        $('#' + i).val(localStorage.getItem("m " + i));
+    for (var i = 0; i <= 6; i++) {
+        $('#' + i).val(localStorage.getItem("day" + i));
     }
 
     //Save user-input into localStorage
@@ -26,14 +26,14 @@ $(document).ready(function () {
         var results = a.previousElementSibling.firstElementChild;
         data = $(results).val().trim();
         var time = results.id;
-        localStorage.setItem("hour " + time, data);
+        localStorage.setItem("day" + time, data);
     });
 
     //Change color between tomato and grey based on if the time has passed
     function changeColor() {
 
-        for (i = 8; i <= 15; i++) {
-            var currentTime = moment().hour();
+        for (i = 0; i <= 6; i++) {
+            var currentTime = moment().day();
 
             //Present
             if (currentTime === i) {
