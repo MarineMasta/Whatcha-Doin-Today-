@@ -8,15 +8,15 @@ $(document).ready(function () {
     $("#exact-time").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
     changeColor();
 
-    //Time update function interval so that it runs every second (100ms)
+    //Time update function interval so that it runs every second (1000ms)
     setInterval(function () {
         $("#exact-time").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
         changeColor();
     }, 1000);
 
     //localStorage function
-    for (var i = 8; i <= 18; i++) {
-        $('#' + i).val(localStorage.getItem("hour " + i));
+    for (var i = 8; i <= 15; i++) {
+        $('#' + i).val(localStorage.getItem("m " + i));
     }
 
     //Save user-input into localStorage
@@ -32,7 +32,7 @@ $(document).ready(function () {
     //Change color between tomato and grey based on if the time has passed
     function changeColor() {
 
-        for (i = 8; i <= 18; i++) {
+        for (i = 8; i <= 15; i++) {
             var currentTime = moment().hour();
 
             //Present

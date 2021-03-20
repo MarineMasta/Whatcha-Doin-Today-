@@ -1,0 +1,119 @@
+/* Body */
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://static3.depositphotos.com/1006282/209/i/600/depositphotos_2093332-stock-photo-charcoal.jpg");
+    background-size: 680px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family:Verdana, Tahoma, sans-serif;
+  
+  }
+
+/* Nav Bar */
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    letter-spacing: 5px;
+  }
+  /*Nav Bar Marine Bruno Header*/
+  .navbar-brand {
+      font-weight: 900;
+      font-size: 25px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      line-height: 50px;
+  }
+  @media screen and (min-width: 1200px) {
+      .navbar-brand {
+          font-size: 30px;
+      }
+  }
+
+  /*Nav Bar Menu/List*/
+  .navbar-nav li a {
+      border: 15px solid #333333;;
+  }
+  /*Nav Bar Hover Underline and Color Change*/
+  .navbar-nav li a:hover {
+      color:tomato !important;
+      text-decoration: underline;
+  }
+/* Jumbotron */
+.jumbotron{
+    text-align: center;
+    background-color: rgb(255, 99, 71, .9);
+    color: #333333;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 100px;
+}
+
+/* Table */
+.table{
+    max-width: 950px;
+    margin: auto;
+}
+tr {
+    height: 50px;
+}
+td{
+    color: #333333;
+    vertical-align: middle;
+}
+
+/* Time Blocks */
+.time-col{
+    width: 100px;
+    text-align: center;
+    background-color: tomato;
+}
+
+/* User Input Blocks */
+.info-col{
+    background: rgb(221, 140, 125);
+    text-align: center;
+}
+
+.user-input{
+    background-color: inherit;
+    height: 50px;
+    width: 100%;
+    border: none;
+}
+
+@media screen and (max-width: 480px){
+    .info-col{
+        width: 60%;
+    }  
+  }
+
+/* Save Button Blocks */
+.save-col{
+    background: tomato;
+    width: 100px;
+    text-align: center;
+    background-image: url(https://visualpharm.com/assets/616/Save-595b40b85ba036ed117dba16.svg);
+    background-repeat: no-repeat ;
+    background-position: center;
+}
+
+.save-button:hover{
+    cursor: pointer;
+    background-color: #333333;
+}
+
+  /*Footer*/
+.bg-3 {
+    margin-top: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color:#333333;
+    color: grey;
+  }
