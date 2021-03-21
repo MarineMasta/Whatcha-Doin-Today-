@@ -21,7 +21,14 @@ $(document).ready(function () {
     //localStorage function
     for (var i = 8; i <= 18; i++) {
         $('#' + i).val(localStorage.getItem("schedule" + i));
-     }
+     };
+
+    var clearBtn = $(".clear-button");
+
+    clearBtn.click(function () {
+        localStorage.clear();
+        location.reload();
+    });
 
 
     //Change color between tomato and grey based on if the time has passed

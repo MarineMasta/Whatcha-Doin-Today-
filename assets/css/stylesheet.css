@@ -119,6 +119,19 @@ td{
     background-color: #333333;
 }
 
+.clearing {
+    text-align: center;
+}
+
+.clear-button {
+    margin-top: 20px;
+    background-color: tomato;
+}
+
+.clear-button:focus {
+    outline: none;
+}
+
   /*Footer*/
 .bg-3 {
     margin-top: 100px;
