@@ -11,7 +11,6 @@ $(document).ready(function () {
     }, 1000);
 
     //Save user-input into localStorage
-     //Save button variable
      var saveBtn = $(".save-button");
 
      saveBtn.click(function () {
@@ -23,6 +22,15 @@ $(document).ready(function () {
      for (var i = 0; i <= 34; i++) {
          $('#' + i).val(localStorage.getItem("mschedule" + i));
       }
+
+    //Clears and Refreshes Page
+    var clearBtn = $(".clear-button");
+
+    clearBtn.click(function () {
+      localStorage.clear();
+      location.reload();
+    });
+  
 
     //Change color between tomato and grey based on if the time has passed
     function changeColor() {

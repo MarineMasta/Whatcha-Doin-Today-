@@ -10,7 +10,6 @@ $(document).ready(function () {
     }, 1000);
 
     //Save user-input into localStorage
-     //Save button variable
     var saveBtn = $(".save-button");
 
     saveBtn.click(function () {
@@ -23,6 +22,7 @@ $(document).ready(function () {
         $('#' + i).val(localStorage.getItem("schedule" + i));
      };
 
+    //Clears and Refreshes Button
     var clearBtn = $(".clear-button");
 
     clearBtn.click(function () {
