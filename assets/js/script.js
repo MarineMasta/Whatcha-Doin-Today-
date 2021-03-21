@@ -42,7 +42,7 @@ $(document).ready(function () {
 
             //Past
             else if (currentTime > i) {
-                $("." + i).attr("style", "background-color: #333333; color: grey");
+                $("." + i).attr("style", "background-color: #333333");
             }
         }
     }
