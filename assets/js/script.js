@@ -1,33 +1,28 @@
 $(document).ready(function () {
-
-    //Save button variable
-    var saveButton = $(".save-button");
-    let data;
-
     //Time update function
-    $("#exact-time").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
+    $("#time").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
     changeColor();
 
     //Time update function interval so that it runs every second (100ms)
     setInterval(function () {
-        $("#exact-time").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
+        $("#time").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
         changeColor();
     }, 1000);
 
+    //Save user-input into localStorage
+     //Save button variable
+    var saveBtn = $(".save-button");
+
+    saveBtn.click(function () {
+        var results = this.previousElementSibling.firstElementChild;
+       localStorage.setItem("schedule" + results.id, $(results).val());
+    });
+
     //localStorage function
     for (var i = 8; i <= 18; i++) {
-        $('#' + i).val(localStorage.getItem("hour " + i));
-    }
+        $('#' + i).val(localStorage.getItem("schedule" + i));
+     }
 
-    //Save user-input into localStorage
-    saveButton.click(function () {
-        event.preventDefault();
-        var a = this;
-        var results = a.previousElementSibling.firstElementChild;
-        data = $(results).val().trim();
-        var time = results.id;
-        localStorage.setItem("hour " + time, data);
-    });
 
     //Change color between tomato and grey based on if the time has passed
     function changeColor() {
